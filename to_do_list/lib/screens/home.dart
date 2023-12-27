@@ -85,18 +85,18 @@ class _HomeState extends State<Home> {
                 Container(
                   margin: const EdgeInsets.only(bottom: 20, right: 20),
                   child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 52, 1, 147),
-                        foregroundColor: Colors.white,
-                        minimumSize: const Size(60, 60),
-                        elevation: 10),
-                    child: const Text(
+                    child: Text(
                       '+',
                       style: TextStyle(
                         fontSize: 40,
                       ),
                     ),
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 52, 1, 147),
+                        foregroundColor: Colors.white,
+                        minimumSize: Size(60, 60),
+                        elevation: 10),
                   ),
                 ),
               ],
