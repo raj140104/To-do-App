@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
                         ToDoItem(
                           todo: todo,
                           onToDoChanged: _handleToDOChange,
-                          onDeleteItem: () {},
+                          onDeleteItem: _deleteToDoItem,
                         ),
                     ],
                   ),
@@ -110,6 +110,12 @@ class _HomeState extends State<Home> {
   void _handleToDOChange(ToDo toDo) {
     setState(() {
       toDo.isDone = !toDo.isDone;
+    });
+  }
+
+  void _deleteToDoItem(String id) {
+    setState(() {
+      todoList.removeWhere((item) => item.id == id);
     });
   }
 
