@@ -58,12 +58,14 @@ class _HomeState extends State<Home> {
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(bottom: 20, right: 20, left: 20),
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                    margin:
+                        const EdgeInsets.only(bottom: 20, right: 20, left: 20),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      boxShadow: [
-                        const BoxShadow(
+                      boxShadow: const [
+                        BoxShadow(
                           color: Colors.grey,
                           offset: Offset(0.0, 0.0),
                           blurRadius: 10.0,
@@ -72,7 +74,7 @@ class _HomeState extends State<Home> {
                       ],
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: TextField(
+                    child: const TextField(
                       decoration: InputDecoration(
                         hintText: 'Add New to do Item',
                         border: InputBorder.none,
@@ -81,20 +83,20 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(bottom: 20, right: 20),
+                  margin: const EdgeInsets.only(bottom: 20, right: 20),
                   child: ElevatedButton(
-                    child: Text(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color.fromARGB(255, 52, 1, 147),
+                        foregroundColor: Colors.white,
+                        minimumSize: const Size(60, 60),
+                        elevation: 10),
+                    child: const Text(
                       '+',
                       style: TextStyle(
                         fontSize: 40,
                       ),
                     ),
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 52, 1, 147),
-                        foregroundColor: Colors.white,
-                        minimumSize: Size(60, 60),
-                        elevation: 10),
                   ),
                 ),
               ],
